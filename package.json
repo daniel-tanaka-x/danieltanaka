@@ -1,0 +1,27 @@
+{
+  "name": "author-portfolio-website",
+  "version": "1.0.0",
+  "description": "Modern responsive author portfolio website with virtual bookshelf and blog",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "author",
+    "portfolio",
+    "books",
+    "blog",
+    "static-site"
+  ],
+  "author": "Author Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/author-portfolio"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

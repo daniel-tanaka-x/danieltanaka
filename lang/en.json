@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "title": "Daniel Tanaka - Cryptocurrency Trader & Kindle Author",
+    "description": "Welcome to the official website of Daniel Tanaka - cryptocurrency trader, Kindle author, and technology enthusiast. Discover investment strategies, trading insights, and technical projects.",
+    "ogTitle": "Daniel Tanaka - Cryptocurrency Trader & Kindle Author",
+    "ogDescription": "Discover Daniel Tanaka's world of cryptocurrency trading, investment strategies, and technology insights."
+  },
+  "nav": {
+    "home": "Home",
+    "books": "Books",
+    "blog": "Blog", 
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to My Digital Finance World",
+      "subtitle": "Explore cryptocurrency trading strategies, investment insights, and technology innovations. Join me on a journey through digital finance, trading automation, and blockchain technology.",
+      "ctaBooks": "Explore My Books",
+      "ctaBlog": "Read Latest Posts"
+    },
+    "featured": {
+      "title": "Featured Books",
+      "viewAll": "View All Books"
+    },
+    "blog": {
+      "title": "Latest from the Blog",
+      "viewAll": "View All Posts"
+    },
+    "connect": {
+      "title": "Let's Connect",
+      "subtitle": "Join my community of readers and stay updated with the latest news, book releases, and behind-the-scenes insights.",
+      "cta": "Get in Touch"
+    }
+  },
+  "books": {
+    "hero": {
+      "title": "My Books",
+      "subtitle": "Discover my collection of cryptocurrency and trading books. Each publication shares practical insights, strategies, and tools for navigating the digital finance world."
+    },
+    "filters": {
+      "all": "All Books",
+      "trading": "Trading",
+      "investment": "Investment", 
+      "cryptocurrency": "Cryptocurrency",
+      "notebook": "Notebooks",
+      "kindle": "Kindle"
+    },
+    "book1": {
+      "title": "Don't Lose to Fear, Buy",
+      "author": "by Daniel Tanaka",
+      "description": "Investment strategies learning from sentiment analysis. Master emotional control and overcome fear-based trading decisions.",
+      "price": "Kindle Edition",
+      "buyButton": "Buy on Amazon",
+      "learnMore": "Learn More"
+    },
+    "book2": {
+      "title": "Bitcoin Worth Logbook", 
+      "author": "by Daniel Tanaka",
+      "description": "A practical notebook for tracking your Bitcoin investments and cryptocurrency portfolio performance over time.",
+      "price": "Physical Notebook",
+      "buyButton": "Buy on Amazon",
+      "learnMore": "Learn More"
+    },
+    "newsletter": {
+      "title": "Get Notified of New Releases",
+      "subtitle": "Be the first to know when my next book is available. Join my newsletter for exclusive previews, behind-the-scenes content, and special offers.",
+      "placeholder": "Your email address",
+      "button": "Subscribe"
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "My Blog",
+      "subtitle": "Insights on cryptocurrency trading, investment strategies, and technology innovations. Join me on this journey through digital finance."
+    },
+    "categories": {
+      "all": "All Posts",
+      "trading": "Trading Tips",
+      "tech": "Technology",
+      "crypto": "Cryptocurrency",
+      "analysis": "Market Analysis",
+      "automation": "Trading Automation"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "subtitle": "Get my latest blog posts delivered directly to your inbox, plus exclusive trading tips and behind-the-scenes content.",
+      "placeholder": "Your email address",
+      "button": "Subscribe"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Hello, I'm Daniel Tanaka",
+      "subtitle": "Cryptocurrency trader, Kindle author, and technology enthusiast based in Europe.",
+      "description": "I believe that financial technology can democratize investing and trading for everyone. My passion lies in cryptocurrency markets, automated trading systems, and sharing practical insights through my books and technical projects. I specialize in Python development, market analysis, and building trading bots.",
+      "ctaBooks": "Explore My Books",
+      "ctaContact": "Get in Touch"
+    },
+    "stats": {
+      "books": "Published Books",
+      "articles": "Note Articles", 
+      "python": "Python Focus",
+      "followers": "Note Followers"
+    },
+    "story": {
+      "title": "My Story",
+      "p1": "My journey into cryptocurrency and trading began with a fascination for technology and financial markets. What started as curiosity about Bitcoin evolved into a deep passion for understanding market dynamics, sentiment analysis, and the psychological aspects of trading decisions.",
+      "p2": "Based in Europe, I've developed expertise in Python programming, focusing on trading automation and market analysis tools. My projects range from simple trading bots to complex sentiment analysis systems that help traders overcome emotional decision-making—a common pitfall in volatile markets.",
+      "p3": "My breakthrough came with understanding that successful trading isn't just about technical analysis or market timing—it's about emotional control and systematic approaches. This insight led to my book \"Don't Lose to Fear, Buy,\" which explores how sentiment analysis can improve investment decisions.",
+      "p4": "Today, I share my knowledge through Kindle books, technical articles on Qiita, and insights on Note.com. My goal is to make cryptocurrency trading and investment strategies accessible to everyone, combining technical expertise with practical, real-world applications."
+    },
+    "philosophy": {
+      "title": "My Trading Philosophy",
+      "quote": "\"Every trade is a lesson. My job as a trader is to build systems robust enough to handle market volatility, smart enough to capitalize on opportunities, and disciplined enough to manage risk consistently.\"",
+      "description": "I believe in the power of systematic trading approaches combined with emotional intelligence. Whether I'm developing trading algorithms or sharing insights through my writing, my goal is always to educate, systematize, and improve trading outcomes."
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Let's Connect",
+      "subtitle": "I love hearing from traders, fellow developers, and technology enthusiasts. Whether you have questions about my books, want to discuss trading strategies, or explore collaboration opportunities, I'd be delighted to hear from you."
+    },
+    "methods": {
+      "email": {
+        "title": "Email", 
+        "description": "For general inquiries, trading questions, or collaboration opportunities",
+        "address": "hello@danieltanaka.com"
+      },
+      "business": {
+        "title": "Business Inquiries",
+        "description": "For partnership opportunities and business collaborations", 
+        "address": "business@danieltanaka.com"
+      },
+      "technical": {
+        "title": "Technical Discussion",
+        "description": "For trading bot development and technical consultation",
+        "address": "tech@danieltanaka.com"
+      }
+    },
+    "form": {
+      "title": "Send Me a Message",
+      "firstName": "First Name",
+      "lastName": "Last Name", 
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "newsletter": "I'd like to receive updates about new book releases and trading insights",
+      "button": "Send Message",
+      "success": "Thank you! Your message has been sent successfully. I'll get back to you soon.",
+      "error": "Oops! There was an error sending your message. Please try again."
+    },
+    "social": {
+      "title": "Connect on Social Media",
+      "subtitle": "Follow me on social media for daily trading insights, technical tutorials, market analysis, and updates on my latest projects.",
+      "twitter": "Follow @daniel_tanaka_",
+      "note": "Read on Note.com", 
+      "qiita": "Technical Articles",
+      "substack": "Subscribe to Newsletter"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "About Daniel Tanaka",
+      "description": "Cryptocurrency trader, Kindle author, and technology enthusiast. Passionate about sharing trading insights, investment strategies, and innovative approaches to digital finance."
+    },
+    "links": {
+      "title": "Quick Links",
+      "books": "My Books",
+      "blog": "Blog", 
+      "about": "About Me",
+      "contact": "Contact"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Stay updated with my latest releases and exclusive content.",
+      "placeholder": "Your email",
+      "button": "Subscribe"
+    },
+    "copyright": "© 2024 Daniel Tanaka. All rights reserved."
+  },
+  "common": {
+    "readMore": "Read More",
+    "buyAmazon": "Buy on Amazon",
+    "learnMore": "Learn More",
+    "subscribe": "Subscribe",
+    "loading": "Loading...",
+    "error": "Error occurred"
+  }
+}

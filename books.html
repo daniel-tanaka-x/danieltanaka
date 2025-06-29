@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Daniel Tanaka's complete collection of cryptocurrency and trading books. Investment strategies, Bitcoin insights, and digital finance guidance.">
+    <meta name="keywords" content="cryptocurrency books, trading strategies, bitcoin, investment, kindle books, Daniel Tanaka, sentiment analysis">
+    <meta name="author" content="Daniel Tanaka">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Books by Author Name - Complete Collection">
+    <meta property="og:description" content="Explore the complete collection of books by [Author Name]. From gripping fiction to insightful non-fiction.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/books.html">
+    <meta property="og:image" content="https://yourwebsite.com/assets/books-collection.jpg">
+    
+    <title>Books - Daniel Tanaka</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Additional CSS for book filters -->
+    <style>
+        .book-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .filter-btn {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background-color: var(--background-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+        
+        .book-card.hidden {
+            display: none;
+        }
+        
+        .book-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--overlay-color);
+            z-index: var(--z-modal);
+            padding: var(--spacing-xl);
+        }
+        
+        .book-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .book-modal__content {
+            background-color: var(--background-primary);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-2xl);
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .book-modal__close {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            background: none;
+            border: none;
+            font-size: var(--font-size-2xl);
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+        
+        .book-modal__close:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo">Daniel Tanaka</a>
+                
+                <nav class="nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav__list">
+                        <li><a href="index.html" class="nav__link">Home</a></li>
+                        <li><a href="books.html" class="nav__link nav__link--active">Books</a></li>
+                        <li><a href="blog.html" class="nav__link">Blog</a></li>
+                        <li><a href="about.html" class="nav__link">About</a></li>
+                        <li><a href="contact.html" class="nav__link">Contact</a></li>
+                    </ul>
+                    
+                    <button class="theme-toggle" aria-label="Toggle dark/light theme">
+                        <svg class="theme-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                </nav>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span class="mobile-menu-toggle__bar"></span>
+                    <span class="mobile-menu-toggle__bar"></span>
+                    <span class="mobile-menu-toggle__bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" style="padding: var(--spacing-2xl) 0;">
+            <div class="container">
+                <h1 class="hero__title" style="font-size: var(--font-size-4xl);">My Books</h1>
+                <p class="hero__subtitle" style="font-size: var(--font-size-lg);">
+                    Discover my collection of cryptocurrency and trading books. Each publication shares practical insights, strategies, and tools for navigating the digital finance world.
+                </p>
+            </div>
+        </section>
+
+        <!-- Book Collection -->
+        <section class="section">
+            <div class="container">
+                <!-- Filters -->
+                <div class="book-filters">
+                    <button class="filter-btn active" data-filter="all">All Books</button>
+                    <button class="filter-btn" data-filter="trading">Trading</button>
+                    <button class="filter-btn" data-filter="investment">Investment</button>
+                    <button class="filter-btn" data-filter="cryptocurrency">Cryptocurrency</button>
+                    <button class="filter-btn" data-filter="notebook">Notebooks</button>
+                    <button class="filter-btn" data-filter="kindle">Kindle</button>
+                </div>
+
+                <!-- Books Grid -->
+                <div class="book-grid" id="books-grid">
+                    <!-- Book 1 -->
+                    <div class="book-card" data-category="investment trading kindle" data-book-id="book1">
+                        <img src="https://via.placeholder.com/200x280/f39c12/2c3e50?text=Don't+Lose+to+Fear+Buy" 
+                             alt="Don't Lose to Fear, Buy - Investment Strategy Book" 
+                             class="book-card__cover">
+                        <div class="book-card__content">
+                            <h3 class="book-card__title">Don't Lose to Fear, Buy</h3>
+                            <p class="book-card__author">by Daniel Tanaka</p>
+                            <p class="book-card__description">
+                                Investment strategies learning from sentiment analysis. Master emotional control and overcome fear-based trading decisions.
+                            </p>
+                            <div class="book-card__price">Kindle Edition</div>
+                            <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                                <a href="https://www.amazon.co.jp/Daniel-Tanaka-ebook/dp/B0FF9JPLBR" class="btn btn--primary" style="flex: 1;">Buy on Amazon</a>
+                                <button class="btn btn--secondary" onclick="openBookModal('book1')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Book 2 -->
+                    <div class="book-card" data-category="cryptocurrency notebook" data-book-id="book2">
+                        <img src="https://via.placeholder.com/200x280/3498db/ffffff?text=Bitcoin+Worth+Logbook" 
+                             alt="Bitcoin Worth Logbook - Cryptocurrency Tracking" 
+                             class="book-card__cover">
+                        <div class="book-card__content">
+                            <h3 class="book-card__title">Bitcoin Worth Logbook</h3>
+                            <p class="book-card__author">by Daniel Tanaka</p>
+                            <p class="book-card__description">
+                                A practical notebook for tracking your Bitcoin investments and cryptocurrency portfolio performance over time.
+                            </p>
+                            <div class="book-card__price">Physical Notebook</div>
+                            <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                                <a href="https://www.amazon.co.jp/Bitcoin-Worth-Logbook-Daniel-Tanaka/dp/B0FDQS8ZGQ/" class="btn btn--primary" style="flex: 1;">Buy on Amazon</a>
+                                <button class="btn btn--secondary" onclick="openBookModal('book2')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Book 3 -->
+                    <div class="book-card" data-category="trading kindle" data-book-id="book3">
+                        <img src="https://via.placeholder.com/200x280/e74c3c/ffffff?text=Trading+Book+2" 
+                             alt="Trading Strategies Book" 
+                             class="book-card__cover">
+                        <div class="book-card__content">
+                            <h3 class="book-card__title">Trading Strategies Vol. 2</h3>
+                            <p class="book-card__author">by Daniel Tanaka</p>
+                            <p class="book-card__description">
+                                Advanced trading techniques, market analysis, and automation strategies for cryptocurrency markets.
+                            </p>
+                            <div class="book-card__price">Kindle Edition</div>
+                            <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                                <a href="https://www.amazon.co.jp/Daniel-Tanaka-ebook/dp/B0DPTN76L1/" class="btn btn--primary" style="flex: 1;">Buy on Amazon</a>
+                                <button class="btn btn--secondary" onclick="openBookModal('book3')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Book 4 -->
+                    <div class="book-card" data-category="cryptocurrency trading kindle" data-book-id="book4">
+                        <img src="https://via.placeholder.com/200x280/27ae60/ffffff?text=Crypto+Analysis" 
+                             alt="Cryptocurrency Analysis Book" 
+                             class="book-card__cover">
+                        <div class="book-card__content">
+                            <h3 class="book-card__title">Cryptocurrency Analysis</h3>
+                            <p class="book-card__author">by Daniel Tanaka</p>
+                            <p class="book-card__description">
+                                Deep dive into cryptocurrency market analysis, technical indicators, and data-driven trading approaches.
+                            </p>
+                            <div class="book-card__price">Kindle Edition</div>
+                            <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                                <a href="https://www.amazon.co.jp/Daniel-Tanaka-ebook/dp/B0DYNNTW67/" class="btn btn--primary" style="flex: 1;">Buy on Amazon</a>
+                                <button class="btn btn--secondary" onclick="openBookModal('book4')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Book 5 -->
+                    <div class="book-card" data-category="investment kindle" data-book-id="book5">
+                        <img src="https://via.placeholder.com/200x280/9b59b6/ffffff?text=Investment+Guide" 
+                             alt="Investment Guide Book" 
+                             class="book-card__cover">
+                        <div class="book-card__content">
+                            <h3 class="book-card__title">Digital Asset Investment Guide</h3>
+                            <p class="book-card__author">by Daniel Tanaka</p>
+                            <p class="book-card__description">
+                                Comprehensive guide to investing in digital assets, risk management, and portfolio optimization strategies.
+                            </p>
+                            <div class="book-card__price">Kindle Edition</div>
+                            <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                                <a href="https://www.amazon.co.jp/Daniel-Tanaka-ebook/dp/B0F9T8KNMJ/" class="btn btn--primary" style="flex: 1;">Buy on Amazon</a>
+                                <button class="btn btn--secondary" onclick="openBookModal('book5')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Book 6 -->
+                    <div class="book-card" data-category="trading kindle" data-book-id="book6">
+                        <img src="https://via.placeholder.com/200x280/1abc9c/ffffff?text=Advanced+Trading" 
+                             alt="Advanced Trading Techniques" 
+                             class="book-card__cover">
+                        <div class="book-card__content">
+                            <h3 class="book-card__title">Advanced Trading Techniques</h3>
+                            <p class="book-card__author">by Daniel Tanaka</p>
+                            <p class="book-card__description">
+                                Master advanced trading methodologies, algorithmic approaches, and sophisticated market timing strategies.
+                            </p>
+                            <div class="book-card__price">Kindle Edition</div>
+                            <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                                <a href="https://www.amazon.co.jp/Daniel-Tanaka-ebook/dp/B0FC51CCG7/" class="btn btn--primary" style="flex: 1;">Buy on Amazon</a>
+                                <button class="btn btn--secondary" onclick="openBookModal('book6')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="section" style="background-color: var(--background-secondary);">
+            <div class="container">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <h2>Get Notified of New Releases</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-2xl);">
+                        Be the first to know when my next book is available. Join my newsletter for exclusive previews, behind-the-scenes content, and special offers.
+                    </p>
+                    <form style="display: flex; gap: var(--spacing-md); max-width: 400px; margin: 0 auto;" action="#" method="post">
+                        <input type="email" placeholder="Your email address" class="form-input" style="flex: 1;" required>
+                        <button type="submit" class="btn btn--primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Book Detail Modals -->
+    <div class="book-modal" id="book-modal">
+        <div class="book-modal__content">
+            <button class="book-modal__close" onclick="closeBookModal()">&times;</button>
+            <div id="modal-content">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>About Author Name</h3>
+                    <p>
+                        A passionate storyteller with a love for crafting compelling narratives that resonate with readers worldwide. 
+                        Author of multiple bestselling novels across various genres.
+                    </p>
+                </div>
+                
+                <div class="footer__section">
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="books.html">My Books</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="blog.html">Blog</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="about.html">About Me</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://twitter.com/authorname" class="social-link" aria-label="Follow on Twitter">
+                            <svg class="social-link__icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/authorname" class="social-link" aria-label="Follow on Facebook">
+                            <svg class="social-link__icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 Author Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Book filtering and modal scripts -->
+    <script>
+        // Book filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const bookCards = document.querySelectorAll('.book-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active filter button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter books
+                    bookCards.forEach(card => {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        
+                        if (filter === 'all' || categories.includes(filter)) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+
+        // Book modal functionality
+        const bookDetails = {
+            book1: {
+                title: "The Midnight Garden",
+                cover: "https://via.placeholder.com/200x280/3498db/ffffff?text=The+Midnight+Garden",
+                description: "A haunting tale of love, loss, and redemption set in a mystical garden where time stands still and secrets bloom in the darkness. Follow Sarah as she discovers a hidden garden that exists between worlds, where she must confront her past to save her future.",
+                genre: "Fiction, Mystery",
+                pages: 342,
+                published: "2023",
+                isbn: "978-0-123456-78-9",
+                rating: "4.8/5 stars",
+                reviews: "Over 1,200 reviews",
+                amazonLink: "https://amazon.com/midnight-garden"
+            },
+            book2: {
+                title: "Echoes of Tomorrow",
+                cover: "https://via.placeholder.com/200x280/e74c3c/ffffff?text=Echoes+of+Tomorrow",
+                description: "A gripping sci-fi thriller that explores the consequences of time travel and the delicate threads that weave our destiny. When Dr. Elena Vasquez discovers a way to send messages to the past, she must navigate the dangerous waters of temporal paradoxes.",
+                genre: "Science Fiction, Thriller",
+                pages: 387,
+                published: "2023",
+                isbn: "978-0-123456-79-6",
+                rating: "4.7/5 stars",
+                reviews: "Over 890 reviews",
+                amazonLink: "https://amazon.com/echoes-tomorrow"
+            },
+            book3: {
+                title: "The Writer's Journey",
+                cover: "https://via.placeholder.com/200x280/27ae60/ffffff?text=The+Writer's+Journey",
+                description: "A comprehensive guide for aspiring authors, filled with practical insights and proven techniques for crafting compelling stories. Based on over 15 years of writing experience and helping thousands of writers find their voice.",
+                genre: "Non-Fiction, Writing Guide",
+                pages: 298,
+                published: "2022",
+                isbn: "978-0-123456-80-2",
+                rating: "4.9/5 stars",
+                reviews: "Over 2,100 reviews",
+                amazonLink: "https://amazon.com/writers-journey"
+            }
+        };
+
+        function openBookModal(bookId) {
+            const modal = document.getElementById('book-modal');
+            const modalContent = document.getElementById('modal-content');
+            const book = bookDetails[bookId];
+
+            if (book) {
+                modalContent.innerHTML = `
+                    <div style="display: flex; gap: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                        <img src="${book.cover}" alt="${book.title}" style="width: 200px; height: 280px; object-fit: cover; border-radius: var(--border-radius-md);">
+                        <div style="flex: 1;">
+                            <h2 style="margin-bottom: var(--spacing-md);">${book.title}</h2>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>Genre:</strong> ${book.genre}</p>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>Pages:</strong> ${book.pages}</p>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>Published:</strong> ${book.published}</p>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);"><strong>Rating:</strong> ${book.rating}</p>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);"><strong>Reviews:</strong> ${book.reviews}</p>
+                            <a href="${book.amazonLink}" class="btn btn--primary btn--large">Buy on Amazon</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-md);">About This Book</h3>
+                        <p style="line-height: var(--line-height-loose);">${book.description}</p>
+                    </div>
+                `;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBookModal() {
+            const modal = document.getElementById('book-modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('book-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBookModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeBookModal();
+            }
+        });
+    </script>
+</body>
+</html>

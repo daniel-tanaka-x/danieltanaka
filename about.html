@@ -181,17 +181,22 @@
                 
                 <nav class="nav" role="navigation" aria-label="Main navigation">
                     <ul class="nav__list">
-                        <li><a href="index.html" class="nav__link">Home</a></li>
-                        <li><a href="books.html" class="nav__link">Books</a></li>
-                        <li><a href="blog.html" class="nav__link">Blog</a></li>
-                        <li><a href="about.html" class="nav__link nav__link--active">About</a></li>
-                        <li><a href="contact.html" class="nav__link">Contact</a></li>
+                        <li><a href="index.html" class="nav__link" data-translate="nav.home">Home</a></li>
+                        <li><a href="books.html" class="nav__link" data-translate="nav.books">Books</a></li>
+                        <li><a href="blog.html" class="nav__link" data-translate="nav.blog">Blog</a></li>
+                        <li><a href="about.html" class="nav__link nav__link--active" data-translate="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav__link" data-translate="nav.contact">Contact</a></li>
                     </ul>
                     
                     <button class="theme-toggle" aria-label="Toggle dark/light theme">
                         <svg class="theme-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
                         </svg>
+                    </button>
+                    
+                    <button class="language-toggle" aria-label="Switch language">
+                        <span class="language-flag">🇺🇸</span>
+                        <span class="language-text">English</span>
                     </button>
                 </nav>
                 
@@ -216,18 +221,18 @@
                              class="about-photo">
                     </div>
                     <div>
-                        <h1 style="font-size: var(--font-size-4xl); margin-bottom: var(--spacing-lg);">Hello, I'm Daniel Tanaka</h1>
-                        <p style="font-size: var(--font-size-xl); color: var(--text-secondary); margin-bottom: var(--spacing-xl);">
+                        <h1 style="font-size: var(--font-size-4xl); margin-bottom: var(--spacing-lg);" data-translate="about.hero.title">Hello, I'm Daniel Tanaka</h1>
+                        <p style="font-size: var(--font-size-xl); color: var(--text-secondary); margin-bottom: var(--spacing-xl);" data-translate="about.hero.subtitle">
                             Cryptocurrency trader, Kindle author, and technology enthusiast based in Europe.
                         </p>
-                        <p style="font-size: var(--font-size-lg); line-height: var(--line-height-loose); margin-bottom: var(--spacing-xl);">
+                        <p style="font-size: var(--font-size-lg); line-height: var(--line-height-loose); margin-bottom: var(--spacing-xl);" data-translate="about.hero.description">
                             I believe that financial technology can democratize investing and trading for everyone. 
                             My passion lies in cryptocurrency markets, automated trading systems, and sharing practical insights 
                             through my books and technical projects. I specialize in Python development, market analysis, and building trading bots.
                         </p>
                         <div style="display: flex; gap: var(--spacing-md); flex-wrap: wrap;">
-                            <a href="books.html" class="btn btn--primary">Explore My Books</a>
-                            <a href="contact.html" class="btn btn--secondary">Get in Touch</a>
+                            <a href="books.html" class="btn btn--primary" data-translate="about.hero.ctaBooks">Explore My Books</a>
+                            <a href="contact.html" class="btn btn--secondary" data-translate="about.hero.ctaContact">Get in Touch</a>
                         </div>
                     </div>
                 </div>
@@ -262,27 +267,27 @@
         <section class="section" style="background-color: var(--background-secondary);">
             <div class="container">
                 <div style="max-width: 800px; margin: 0 auto;">
-                    <h2 style="text-align: center; margin-bottom: var(--spacing-2xl);">My Story</h2>
+                    <h2 style="text-align: center; margin-bottom: var(--spacing-2xl);" data-translate="about.story.title">My Story</h2>
                     
-                    <p style="font-size: var(--font-size-lg); line-height: var(--line-height-loose); margin-bottom: var(--spacing-xl);">
+                    <p style="font-size: var(--font-size-lg); line-height: var(--line-height-loose); margin-bottom: var(--spacing-xl);" data-translate="about.story.p1">
                         My journey into cryptocurrency and trading began with a fascination for technology and financial markets. 
                         What started as curiosity about Bitcoin evolved into a deep passion for understanding market dynamics, 
                         sentiment analysis, and the psychological aspects of trading decisions.
                     </p>
                     
-                    <p style="line-height: var(--line-height-loose); margin-bottom: var(--spacing-xl);">
+                    <p style="line-height: var(--line-height-loose); margin-bottom: var(--spacing-xl);" data-translate="about.story.p2">
                         Based in Europe, I've developed expertise in Python programming, focusing on trading automation 
                         and market analysis tools. My projects range from simple trading bots to complex sentiment analysis systems 
                         that help traders overcome emotional decision-making—a common pitfall in volatile markets.
                     </p>
                     
-                    <p style="line-height: var(--line-height-loose); margin-bottom: var(--spacing-xl);">
+                    <p style="line-height: var(--line-height-loose); margin-bottom: var(--spacing-xl);" data-translate="about.story.p3">
                         My breakthrough came with understanding that successful trading isn't just about technical analysis 
                         or market timing—it's about emotional control and systematic approaches. This insight led to my book 
                         "Don't Lose to Fear, Buy," which explores how sentiment analysis can improve investment decisions.
                     </p>
                     
-                    <p style="line-height: var(--line-height-loose);">
+                    <p style="line-height: var(--line-height-loose);" data-translate="about.story.p4">
                         Today, I share my knowledge through Kindle books, technical articles on Qiita, and insights on Note.com. 
                         My goal is to make cryptocurrency trading and investment strategies accessible to everyone, 
                         combining technical expertise with practical, real-world applications.
@@ -465,35 +470,35 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__section">
-                    <h3>About Author Name</h3>
-                    <p>
-                        A passionate storyteller with a love for crafting compelling narratives that resonate with readers worldwide. 
-                        Author of multiple bestselling novels across various genres.
+                    <h3 data-translate="footer.about.title">About Daniel Tanaka</h3>
+                    <p data-translate="footer.about.description">
+                        Cryptocurrency trader, Kindle author, and technology enthusiast. Passionate about sharing trading insights, 
+                        investment strategies, and innovative approaches to digital finance.
                     </p>
                 </div>
                 
                 <div class="footer__section">
-                    <h3>Quick Links</h3>
+                    <h3 data-translate="footer.links.title">Quick Links</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="books.html">My Books</a></li>
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="blog.html">Blog</a></li>
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="about.html">About Me</a></li>
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="contact.html">Contact</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="books.html" data-translate="footer.links.books">My Books</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="blog.html" data-translate="footer.links.blog">Blog</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="about.html" data-translate="footer.links.about">About Me</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="contact.html" data-translate="footer.links.contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer__section">
-                    <h3>Newsletter</h3>
-                    <p>Stay updated with my latest releases and exclusive content.</p>
+                    <h3 data-translate="footer.newsletter.title">Newsletter</h3>
+                    <p data-translate="footer.newsletter.description">Stay updated with my latest releases and exclusive content.</p>
                     <form style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);" action="#" method="post">
-                        <input type="email" placeholder="Your email" class="form-input" style="flex: 1;" required>
-                        <button type="submit" class="btn btn--primary">Subscribe</button>
+                        <input type="email" data-translate="footer.newsletter.placeholder" placeholder="Your email" class="form-input" style="flex: 1;" required>
+                        <button type="submit" class="btn btn--primary" data-translate="footer.newsletter.button">Subscribe</button>
                     </form>
                 </div>
             </div>
             
             <div class="footer__bottom">
-                <p>&copy; 2024 Author Name. All rights reserved. | <a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
+                <p data-translate="footer.copyright">&copy; 2024 Daniel Tanaka. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -501,6 +506,8 @@
     <!-- Scripts -->
     <script src="js/theme.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/stats.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

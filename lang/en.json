@@ -23,6 +23,13 @@
       "title": "Featured Books",
       "viewAll": "View All Books"
     },
+    "book3": {
+      "title": "Cryptocurrency Trading Insights",
+      "author": "by Daniel Tanaka",
+      "description": "Explore advanced trading strategies, automated systems, and market analysis techniques for digital assets.",
+      "price": "Kindle",
+      "cta": "View All Books"
+    },
     "blog": {
       "title": "Latest from the Blog",
       "viewAll": "View All Posts"
@@ -110,10 +117,80 @@
       "p3": "My breakthrough came with understanding that successful trading isn't just about technical analysis or market timing—it's about emotional control and systematic approaches. This insight led to my book \"Don't Lose to Fear, Buy,\" which explores how sentiment analysis can improve investment decisions.",
       "p4": "Today, I share my knowledge through Kindle books, technical articles on Qiita, and insights on Note.com. My goal is to make cryptocurrency trading and investment strategies accessible to everyone, combining technical expertise with practical, real-world applications."
     },
+    "timeline": {
+      "title": "My Journey",
+      "2019": {
+        "title": "Cryptocurrency Discovery",
+        "description": "First discovered Bitcoin and began studying cryptocurrency markets, blockchain technology, and trading fundamentals."
+      },
+      "2020": {
+        "title": "Python Development",
+        "description": "Started learning Python programming to build trading automation tools and market analysis systems."
+      },
+      "2021": {
+        "title": "First Trading Bot",
+        "description": "Successfully deployed my first automated trading bot, focusing on sentiment analysis and emotional trading patterns."
+      },
+      "2022": {
+        "title": "Content Creation",
+        "description": "Began sharing trading insights on Note.com and technical articles on Qiita, building a community of fellow traders."
+      },
+      "2023": {
+        "title": "First Book Publication",
+        "description": "Published \"Don't Lose to Fear, Buy\" on Amazon Kindle, sharing sentiment analysis strategies for better investment decisions."
+      },
+      "2024": {
+        "title": "Expanding Knowledge",
+        "description": "Continuing to publish books, develop trading tools, and share insights through multiple platforms while helping others navigate digital finance."
+      }
+    },
+    "facts": {
+      "title": "Fun Facts About Me",
+      "fact1": "I code my trading bots at 5 AM every morning with strong European coffee—my most productive hours!",
+      "fact2": "My desk setup includes 3 monitors: one for coding, one for market charts, and one for social media content.",
+      "fact3": "I've tested over 50 different trading strategies, but sentiment analysis remains my favorite approach.",
+      "fact4": "Before cryptocurrency, I was fascinated by traditional stock markets and spent years learning fundamental analysis.",
+      "fact5": "I maintain detailed trading journals—over 1,000 entries documenting successes, failures, and lessons learned.",
+      "fact6": "My guilty pleasure is reading other traders' stories on social media to understand market psychology.",
+      "fact7": "I'm constantly learning new programming libraries—recently explored machine learning for price prediction.",
+      "fact8": "My favorite debugging method is explaining my code problems to my rubber duck on the desk—it works!"
+    },
     "philosophy": {
       "title": "My Trading Philosophy",
       "quote": "\"Every trade is a lesson. My job as a trader is to build systems robust enough to handle market volatility, smart enough to capitalize on opportunities, and disciplined enough to manage risk consistently.\"",
       "description": "I believe in the power of systematic trading approaches combined with emotional intelligence. Whether I'm developing trading algorithms or sharing insights through my writing, my goal is always to educate, systematize, and improve trading outcomes."
+    },
+    "skills": {
+      "title": "Skills & Technologies",
+      "python": {
+        "title": "Python Development",
+        "description": "Trading bots, data analysis, automation"
+      },
+      "trading": {
+        "title": "Trading Strategies",
+        "description": "Sentiment analysis, technical analysis, risk management"
+      },
+      "content": {
+        "title": "Content Creation",
+        "description": "Technical writing, book publishing, educational content"
+      },
+      "analysis": {
+        "title": "Market Analysis",
+        "description": "Cryptocurrency markets, trend identification, data visualization"
+      },
+      "automation": {
+        "title": "Trading Automation",
+        "description": "Bot development, API integration, system monitoring"
+      },
+      "research": {
+        "title": "Financial Research",
+        "description": "Market psychology, behavioral finance, trend analysis"
+      }
+    },
+    "connect": {
+      "title": "Let's Connect",
+      "description": "I love hearing from traders, fellow developers, and anyone passionate about cryptocurrency and technology. Whether you have questions about my books, want to discuss trading strategies, or explore collaboration opportunities, I'd love to connect with you.",
+      "cta": "Send Me a Message"
     }
   },
   "contact": {

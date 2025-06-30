@@ -81,6 +81,16 @@
       "title": "My Blog",
       "subtitle": "Insights on cryptocurrency trading, investment strategies, and technology innovations. Join me on this journey through digital finance."
     },
+    "comingSoon": {
+      "title": "Blog Coming Soon",
+      "description": "I'm currently working on bringing you valuable content about cryptocurrency trading, investment strategies, Python development, and market analysis. In the meantime, you can find my insights on these platforms:"
+    },
+    "platforms": {
+      "note": "Read on Note.com",
+      "qiita": "Technical Articles on Qiita",
+      "substack": "Subscribe to Newsletter",
+      "twitter": "Follow on X (Twitter)"
+    },
     "categories": {
       "all": "All Posts",
       "trading": "Trading Tips",

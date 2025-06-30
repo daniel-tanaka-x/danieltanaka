@@ -110,17 +110,22 @@
                 
                 <nav class="nav" role="navigation" aria-label="Main navigation">
                     <ul class="nav__list">
-                        <li><a href="index.html" class="nav__link">Home</a></li>
-                        <li><a href="books.html" class="nav__link nav__link--active">Books</a></li>
-                        <li><a href="blog.html" class="nav__link">Blog</a></li>
-                        <li><a href="about.html" class="nav__link">About</a></li>
-                        <li><a href="contact.html" class="nav__link">Contact</a></li>
+                        <li><a href="index.html" class="nav__link" data-translate="nav.home">Home</a></li>
+                        <li><a href="books.html" class="nav__link nav__link--active" data-translate="nav.books">Books</a></li>
+                        <li><a href="blog.html" class="nav__link" data-translate="nav.blog">Blog</a></li>
+                        <li><a href="about.html" class="nav__link" data-translate="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav__link" data-translate="nav.contact">Contact</a></li>
                     </ul>
                     
                     <button class="theme-toggle" aria-label="Toggle dark/light theme">
                         <svg class="theme-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
                         </svg>
+                    </button>
+                    
+                    <button class="language-toggle" aria-label="Switch language">
+                        <span class="language-flag">🇺🇸</span>
+                        <span class="language-text">English</span>
                     </button>
                 </nav>
                 
@@ -138,8 +143,8 @@
         <!-- Hero Section -->
         <section class="hero" style="padding: var(--spacing-2xl) 0;">
             <div class="container">
-                <h1 class="hero__title" style="font-size: var(--font-size-4xl);">My Books</h1>
-                <p class="hero__subtitle" style="font-size: var(--font-size-lg);">
+                <h1 class="hero__title" style="font-size: var(--font-size-4xl);" data-translate="books.hero.title">My Books</h1>
+                <p class="hero__subtitle" style="font-size: var(--font-size-lg);" data-translate="books.hero.subtitle">
                     Discover my collection of cryptocurrency and trading books. Each publication shares practical insights, strategies, and tools for navigating the digital finance world.
                 </p>
             </div>
@@ -150,59 +155,62 @@
             <div class="container">
                 <!-- Filters -->
                 <div class="book-filters">
-                    <button class="filter-btn active" data-filter="all">All Books</button>
-                    <button class="filter-btn" data-filter="trading">Trading</button>
-                    <button class="filter-btn" data-filter="investment">Investment</button>
-                    <button class="filter-btn" data-filter="cryptocurrency">Cryptocurrency</button>
-                    <button class="filter-btn" data-filter="notebook">Notebooks</button>
-                    <button class="filter-btn" data-filter="kindle">Kindle</button>
+                    <button class="filter-btn active" data-filter="all" data-translate="books.filters.all">All Books</button>
+                    <button class="filter-btn" data-filter="trading" data-translate="books.filters.trading">Trading</button>
+                    <button class="filter-btn" data-filter="investment" data-translate="books.filters.investment">Investment</button>
+                    <button class="filter-btn" data-filter="cryptocurrency" data-translate="books.filters.cryptocurrency">Cryptocurrency</button>
+                    <button class="filter-btn" data-filter="notebook" data-translate="books.filters.notebook">Notebooks</button>
+                    <button class="filter-btn" data-filter="kindle" data-translate="books.filters.kindle">Kindle</button>
                 </div>
 
                 <!-- Books Grid -->
                 <div class="book-grid" id="books-grid">
                     <!-- Book 1 -->
                     <div class="book-card" data-category="investment trading kindle" data-book-id="book1">
-                        <img src="https://via.placeholder.com/200x280/f39c12/2c3e50?text=Don't+Lose+to+Fear+Buy" 
+                        <img src="assets/book-covers/dont-lose-to-fear-buy.jpg" 
                              alt="Don't Lose to Fear, Buy - Investment Strategy Book" 
-                             class="book-card__cover">
+                             class="book-card__cover"
+                             onerror="this.src='https://via.placeholder.com/200x280/f39c12/2c3e50?text=Don\'t+Lose+to+Fear+Buy'">
                         <div class="book-card__content">
-                            <h3 class="book-card__title">Don't Lose to Fear, Buy</h3>
-                            <p class="book-card__author">by Daniel Tanaka</p>
-                            <p class="book-card__description">
+                            <h3 class="book-card__title" data-translate="books.book1.title">Don't Lose to Fear, Buy</h3>
+                            <p class="book-card__author" data-translate="books.book1.author">by Daniel Tanaka</p>
+                            <p class="book-card__description" data-translate="books.book1.description">
                                 Investment strategies learning from sentiment analysis. Master emotional control and overcome fear-based trading decisions.
                             </p>
-                            <div class="book-card__price">Kindle Edition</div>
+                            <div class="book-card__price" data-translate="books.book1.price">Kindle Edition</div>
                             <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
-                                <a href="https://www.amazon.co.jp/Daniel-Tanaka-ebook/dp/B0FF9JPLBR" class="btn btn--primary" style="flex: 1;">Buy on Amazon</a>
-                                <button class="btn btn--secondary" onclick="openBookModal('book1')">Learn More</button>
+                                <a href="https://www.amazon.co.jp/Daniel-Tanaka-ebook/dp/B0FF9JPLBR" class="btn btn--primary" style="flex: 1;" data-translate="books.book1.buyButton">Buy on Amazon</a>
+                                <button class="btn btn--secondary" onclick="openBookModal('book1')" data-translate="books.book1.learnMore">Learn More</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Book 2 -->
                     <div class="book-card" data-category="cryptocurrency notebook" data-book-id="book2">
-                        <img src="https://via.placeholder.com/200x280/3498db/ffffff?text=Bitcoin+Worth+Logbook" 
+                        <img src="assets/book-covers/bitcoin-worth-logbook.jpg" 
                              alt="Bitcoin Worth Logbook - Cryptocurrency Tracking" 
-                             class="book-card__cover">
+                             class="book-card__cover"
+                             onerror="this.src='https://via.placeholder.com/200x280/3498db/ffffff?text=Bitcoin+Worth+Logbook'">
                         <div class="book-card__content">
-                            <h3 class="book-card__title">Bitcoin Worth Logbook</h3>
-                            <p class="book-card__author">by Daniel Tanaka</p>
-                            <p class="book-card__description">
+                            <h3 class="book-card__title" data-translate="books.book2.title">Bitcoin Worth Logbook</h3>
+                            <p class="book-card__author" data-translate="books.book2.author">by Daniel Tanaka</p>
+                            <p class="book-card__description" data-translate="books.book2.description">
                                 A practical notebook for tracking your Bitcoin investments and cryptocurrency portfolio performance over time.
                             </p>
-                            <div class="book-card__price">Physical Notebook</div>
+                            <div class="book-card__price" data-translate="books.book2.price">Physical Notebook</div>
                             <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
-                                <a href="https://www.amazon.co.jp/Bitcoin-Worth-Logbook-Daniel-Tanaka/dp/B0FDQS8ZGQ/" class="btn btn--primary" style="flex: 1;">Buy on Amazon</a>
-                                <button class="btn btn--secondary" onclick="openBookModal('book2')">Learn More</button>
+                                <a href="https://www.amazon.co.jp/Bitcoin-Worth-Logbook-Daniel-Tanaka/dp/B0FDQS8ZGQ/" class="btn btn--primary" style="flex: 1;" data-translate="books.book2.buyButton">Buy on Amazon</a>
+                                <button class="btn btn--secondary" onclick="openBookModal('book2')" data-translate="books.book2.learnMore">Learn More</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Book 3 -->
                     <div class="book-card" data-category="trading kindle" data-book-id="book3">
-                        <img src="https://via.placeholder.com/200x280/e74c3c/ffffff?text=Trading+Book+2" 
+                        <img src="assets/book-covers/trading-strategies-vol2.jpg" 
                              alt="Trading Strategies Book" 
-                             class="book-card__cover">
+                             class="book-card__cover"
+                             onerror="this.src='https://via.placeholder.com/200x280/e74c3c/ffffff?text=Trading+Book+2'">
                         <div class="book-card__content">
                             <h3 class="book-card__title">Trading Strategies Vol. 2</h3>
                             <p class="book-card__author">by Daniel Tanaka</p>
@@ -219,9 +227,10 @@
 
                     <!-- Book 4 -->
                     <div class="book-card" data-category="cryptocurrency trading kindle" data-book-id="book4">
-                        <img src="https://via.placeholder.com/200x280/27ae60/ffffff?text=Crypto+Analysis" 
+                        <img src="assets/book-covers/cryptocurrency-analysis.jpg" 
                              alt="Cryptocurrency Analysis Book" 
-                             class="book-card__cover">
+                             class="book-card__cover"
+                             onerror="this.src='https://via.placeholder.com/200x280/27ae60/ffffff?text=Crypto+Analysis'">
                         <div class="book-card__content">
                             <h3 class="book-card__title">Cryptocurrency Analysis</h3>
                             <p class="book-card__author">by Daniel Tanaka</p>
@@ -238,9 +247,10 @@
 
                     <!-- Book 5 -->
                     <div class="book-card" data-category="investment kindle" data-book-id="book5">
-                        <img src="https://via.placeholder.com/200x280/9b59b6/ffffff?text=Investment+Guide" 
+                        <img src="assets/book-covers/digital-asset-investment-guide.jpg" 
                              alt="Investment Guide Book" 
-                             class="book-card__cover">
+                             class="book-card__cover"
+                             onerror="this.src='https://via.placeholder.com/200x280/9b59b6/ffffff?text=Investment+Guide'">
                         <div class="book-card__content">
                             <h3 class="book-card__title">Digital Asset Investment Guide</h3>
                             <p class="book-card__author">by Daniel Tanaka</p>
@@ -257,9 +267,10 @@
 
                     <!-- Book 6 -->
                     <div class="book-card" data-category="trading kindle" data-book-id="book6">
-                        <img src="https://via.placeholder.com/200x280/1abc9c/ffffff?text=Advanced+Trading" 
+                        <img src="assets/book-covers/advanced-trading-techniques.jpg" 
                              alt="Advanced Trading Techniques" 
-                             class="book-card__cover">
+                             class="book-card__cover"
+                             onerror="this.src='https://via.placeholder.com/200x280/1abc9c/ffffff?text=Advanced+Trading'">
                         <div class="book-card__content">
                             <h3 class="book-card__title">Advanced Trading Techniques</h3>
                             <p class="book-card__author">by Daniel Tanaka</p>
@@ -281,13 +292,13 @@
         <section class="section" style="background-color: var(--background-secondary);">
             <div class="container">
                 <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                    <h2>Get Notified of New Releases</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-2xl);">
+                    <h2 data-translate="books.newsletter.title">Get Notified of New Releases</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-2xl);" data-translate="books.newsletter.subtitle">
                         Be the first to know when my next book is available. Join my newsletter for exclusive previews, behind-the-scenes content, and special offers.
                     </p>
                     <form style="display: flex; gap: var(--spacing-md); max-width: 400px; margin: 0 auto;" action="#" method="post">
-                        <input type="email" placeholder="Your email address" class="form-input" style="flex: 1;" required>
-                        <button type="submit" class="btn btn--primary">Subscribe</button>
+                        <input type="email" data-translate="books.newsletter.placeholder" placeholder="Your email address" class="form-input" style="flex: 1;" required>
+                        <button type="submit" class="btn btn--primary" data-translate="books.newsletter.button">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -309,42 +320,35 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__section">
-                    <h3>About Author Name</h3>
-                    <p>
-                        A passionate storyteller with a love for crafting compelling narratives that resonate with readers worldwide. 
-                        Author of multiple bestselling novels across various genres.
+                    <h3 data-translate="footer.about.title">About Daniel Tanaka</h3>
+                    <p data-translate="footer.about.description">
+                        Cryptocurrency trader, Kindle author, and technology enthusiast. Passionate about sharing trading insights, 
+                        investment strategies, and innovative approaches to digital finance.
                     </p>
                 </div>
                 
                 <div class="footer__section">
-                    <h3>Quick Links</h3>
+                    <h3 data-translate="footer.links.title">Quick Links</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="books.html">My Books</a></li>
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="blog.html">Blog</a></li>
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="about.html">About Me</a></li>
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="contact.html">Contact</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="books.html" data-translate="footer.links.books">My Books</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="blog.html" data-translate="footer.links.blog">Blog</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="about.html" data-translate="footer.links.about">About Me</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="contact.html" data-translate="footer.links.contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer__section">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="https://twitter.com/authorname" class="social-link" aria-label="Follow on Twitter">
-                            <svg class="social-link__icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                        </a>
-                        <a href="https://facebook.com/authorname" class="social-link" aria-label="Follow on Facebook">
-                            <svg class="social-link__icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                    </div>
+                    <h3 data-translate="footer.newsletter.title">Newsletter</h3>
+                    <p data-translate="footer.newsletter.description">Stay updated with my latest releases and exclusive content.</p>
+                    <form style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);" action="#" method="post">
+                        <input type="email" data-translate="footer.newsletter.placeholder" placeholder="Your email" class="form-input" style="flex: 1;" required>
+                        <button type="submit" class="btn btn--primary" data-translate="footer.newsletter.button">Subscribe</button>
+                    </form>
                 </div>
             </div>
             
             <div class="footer__bottom">
-                <p>&copy; 2024 Author Name. All rights reserved.</p>
+                <p data-translate="footer.copyright">&copy; 2024 Daniel Tanaka. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -352,6 +356,7 @@
     <!-- Scripts -->
     <script src="js/theme.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/language.js"></script>
     <script src="js/main.js"></script>
     
     <!-- Book filtering and modal scripts -->

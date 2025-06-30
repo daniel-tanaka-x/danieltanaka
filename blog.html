@@ -8,8 +8,8 @@
     <meta name="author" content="Daniel Tanaka">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Blog - Author Name">
-    <meta property="og:description" content="Read the latest blog posts from [Author Name]. Insights on writing, storytelling, and more.">
+    <meta property="og:title" content="Blog - Daniel Tanaka">
+    <meta property="og:description" content="Read the latest blog posts from Daniel Tanaka. Cryptocurrency trading insights, investment strategies, and technology tutorials.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com/blog.html">
     <meta property="og:image" content="https://yourwebsite.com/assets/blog-featured.jpg">
@@ -21,169 +21,6 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
-    
-    <!-- Additional CSS for blog layout -->
-    <style>
-        .blog-header {
-            text-align: center;
-            margin-bottom: var(--spacing-2xl);
-        }
-        
-        .blog-categories {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-2xl);
-        }
-        
-        .category-tag {
-            padding: var(--spacing-xs) var(--spacing-md);
-            background-color: var(--background-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius-lg);
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: var(--font-size-sm);
-            transition: all var(--transition-fast);
-        }
-        
-        .category-tag:hover,
-        .category-tag.active {
-            background-color: var(--secondary-color);
-            color: white;
-            border-color: var(--secondary-color);
-            text-decoration: none;
-        }
-        
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--spacing-2xl);
-            margin-bottom: var(--spacing-3xl);
-        }
-        
-        .blog-card {
-            background-color: var(--background-secondary);
-            border-radius: var(--border-radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: all var(--transition-normal);
-            height: fit-content;
-        }
-        
-        .blog-card:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
-        
-        .blog-card__image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .blog-card__content {
-            padding: var(--spacing-xl);
-        }
-        
-        .blog-card__meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: var(--spacing-md);
-            font-size: var(--font-size-sm);
-            color: var(--text-muted);
-        }
-        
-        .blog-card__category {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: var(--spacing-xs) var(--spacing-sm);
-            border-radius: var(--border-radius-sm);
-            font-size: var(--font-size-xs);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .blog-card__title {
-            font-size: var(--font-size-xl);
-            margin-bottom: var(--spacing-md);
-            color: var(--text-primary);
-        }
-        
-        .blog-card__excerpt {
-            color: var(--text-secondary);
-            line-height: var(--line-height-normal);
-            margin-bottom: var(--spacing-lg);
-        }
-        
-        .blog-card__read-more {
-            color: var(--secondary-color);
-            font-weight: var(--font-weight-medium);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-            transition: color var(--transition-fast);
-        }
-        
-        .blog-card__read-more:hover {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        
-        .blog-card__read-more::after {
-            content: '→';
-            transition: transform var(--transition-fast);
-        }
-        
-        .blog-card__read-more:hover::after {
-            transform: translateX(2px);
-        }
-        
-        .featured-post {
-            grid-column: 1 / -1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-xl);
-            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-            color: white;
-            padding: var(--spacing-2xl);
-            border-radius: var(--border-radius-lg);
-        }
-        
-        .featured-post__content h3,
-        .featured-post__content p,
-        .featured-post__meta {
-            color: white;
-        }
-        
-        .featured-post__image {
-            border-radius: var(--border-radius-md);
-        }
-        
-        .load-more {
-            text-align: center;
-            margin-top: var(--spacing-2xl);
-        }
-        
-        @media (max-width: 768px) {
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .featured-post {
-                grid-template-columns: 1fr;
-            }
-            
-            .blog-categories {
-                justify-content: flex-start;
-                overflow-x: auto;
-                padding-bottom: var(--spacing-sm);
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Skip to main content -->
@@ -197,17 +34,22 @@
                 
                 <nav class="nav" role="navigation" aria-label="Main navigation">
                     <ul class="nav__list">
-                        <li><a href="index.html" class="nav__link">Home</a></li>
-                        <li><a href="books.html" class="nav__link">Books</a></li>
-                        <li><a href="blog.html" class="nav__link nav__link--active">Blog</a></li>
-                        <li><a href="about.html" class="nav__link">About</a></li>
-                        <li><a href="contact.html" class="nav__link">Contact</a></li>
+                        <li><a href="index.html" class="nav__link" data-translate="nav.home">Home</a></li>
+                        <li><a href="books.html" class="nav__link" data-translate="nav.books">Books</a></li>
+                        <li><a href="blog.html" class="nav__link nav__link--active" data-translate="nav.blog">Blog</a></li>
+                        <li><a href="about.html" class="nav__link" data-translate="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav__link" data-translate="nav.contact">Contact</a></li>
                     </ul>
                     
                     <button class="theme-toggle" aria-label="Toggle dark/light theme">
                         <svg class="theme-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
                         </svg>
+                    </button>
+                    
+                    <button class="language-toggle" aria-label="Switch language">
+                        <span class="language-flag">🇺🇸</span>
+                        <span class="language-text">English</span>
                     </button>
                 </nav>
                 
@@ -225,186 +67,53 @@
         <!-- Hero Section -->
         <section class="hero" style="padding: var(--spacing-2xl) 0;">
             <div class="container">
-                <div class="blog-header">
-                    <h1 class="hero__title" style="font-size: var(--font-size-4xl);">My Blog</h1>
-                    <p class="hero__subtitle" style="font-size: var(--font-size-lg);">
-                        Insights on cryptocurrency trading, investment strategies, and technology innovations. Join me on this journey through digital finance.
-                    </p>
-                </div>
+                <h1 class="hero__title" style="font-size: var(--font-size-4xl);" data-translate="blog.hero.title">My Blog</h1>
+                <p class="hero__subtitle" style="font-size: var(--font-size-lg);" data-translate="blog.hero.subtitle">
+                    Insights on cryptocurrency trading, investment strategies, and technology innovations. Join me on this journey through digital finance.
+                </p>
             </div>
         </section>
 
-        <!-- Blog Content -->
+        <!-- Blog Coming Soon Section -->
         <section class="section">
             <div class="container">
-                <!-- Category Filter -->
-                <div class="blog-categories">
-                    <a href="#" class="category-tag active" data-category="all">All Posts</a>
-                    <a href="#" class="category-tag" data-category="writing-tips">Writing Tips</a>
-                    <a href="#" class="category-tag" data-category="behind-scenes">Behind the Scenes</a>
-                    <a href="#" class="category-tag" data-category="book-reviews">Book Reviews</a>
-                    <a href="#" class="category-tag" data-category="industry-insights">Industry Insights</a>
-                    <a href="#" class="category-tag" data-category="personal">Personal</a>
-                </div>
-
-                <!-- Blog Posts Grid -->
-                <div class="blog-grid" id="blog-grid">
-                    <!-- Featured Post -->
-                    <article class="featured-post" data-category="writing-tips">
-                        <div class="featured-post__content">
-                            <div class="blog-card__meta">
-                                <span class="blog-card__category">Featured</span>
-                                <time datetime="2024-03-20">March 20, 2024</time>
-                            </div>
-                            <h3 class="blog-card__title" style="font-size: var(--font-size-2xl);">
-                                The Complete Guide to Character Development
-                            </h3>
-                            <p class="blog-card__excerpt" style="font-size: var(--font-size-lg);">
-                                Creating memorable characters is the cornerstone of great storytelling. In this comprehensive guide, I'll share the techniques I've developed over years of writing to bring characters to life on the page.
-                            </p>
-                            <a href="blog/character-development.html" class="blog-card__read-more" style="color: white; font-size: var(--font-size-lg);">
-                                Read Full Article
-                            </a>
-                        </div>
-                        <img src="https://via.placeholder.com/400x300/ffffff/333333?text=Character+Development" 
-                             alt="Character Development" 
-                             class="featured-post__image">
-                    </article>
-
-                    <!-- Regular Blog Posts -->
-                    <article class="blog-card" data-category="writing-tips">
-                        <img src="https://via.placeholder.com/400x200/3498db/ffffff?text=Writing+Voice" 
-                             alt="Finding Your Writing Voice" 
-                             class="blog-card__image">
-                        <div class="blog-card__content">
-                            <div class="blog-card__meta">
-                                <span class="blog-card__category">Writing Tips</span>
-                                <time datetime="2024-03-15">March 15, 2024</time>
-                            </div>
-                            <h3 class="blog-card__title">Finding Your Unique Writing Voice</h3>
-                            <p class="blog-card__excerpt">
-                                Every writer has a unique voice waiting to be discovered. Learn how to develop and refine your distinctive style that will set your work apart from the crowd.
-                            </p>
-                            <a href="blog/writing-voice.html" class="blog-card__read-more">
-                                Read More
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card" data-category="behind-scenes">
-                        <img src="https://via.placeholder.com/400x200/e74c3c/ffffff?text=Writing+Process" 
-                             alt="My Writing Process" 
-                             class="blog-card__image">
-                        <div class="blog-card__content">
-                            <div class="blog-card__meta">
-                                <span class="blog-card__category">Behind the Scenes</span>
-                                <time datetime="2024-03-10">March 10, 2024</time>
-                            </div>
-                            <h3 class="blog-card__title">Inside My Writing Process</h3>
-                            <p class="blog-card__excerpt">
-                                Take a peek behind the curtain and discover how I approach each new book project, from the initial spark of an idea to the final published work.
-                            </p>
-                            <a href="blog/writing-process.html" class="blog-card__read-more">
-                                Read More
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card" data-category="industry-insights">
-                        <img src="https://via.placeholder.com/400x200/27ae60/ffffff?text=Publishing+World" 
-                             alt="The Publishing World" 
-                             class="blog-card__image">
-                        <div class="blog-card__content">
-                            <div class="blog-card__meta">
-                                <span class="blog-card__category">Industry Insights</span>
-                                <time datetime="2024-03-05">March 5, 2024</time>
-                            </div>
-                            <h3 class="blog-card__title">Navigating the Modern Publishing Landscape</h3>
-                            <p class="blog-card__excerpt">
-                                The publishing industry has evolved dramatically. Here's what every aspiring author needs to know about traditional vs. self-publishing in 2024.
-                            </p>
-                            <a href="blog/publishing-landscape.html" class="blog-card__read-more">
-                                Read More
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card" data-category="book-reviews">
-                        <img src="https://via.placeholder.com/400x200/f39c12/ffffff?text=Book+Review" 
-                             alt="Monthly Book Recommendations" 
-                             class="blog-card__image">
-                        <div class="blog-card__content">
-                            <div class="blog-card__meta">
-                                <span class="blog-card__category">Book Reviews</span>
-                                <time datetime="2024-03-01">March 1, 2024</time>
-                            </div>
-                            <h3 class="blog-card__title">March Book Recommendations</h3>
-                            <p class="blog-card__excerpt">
-                                Discover five exceptional books that have inspired and captivated me this month, spanning multiple genres from literary fiction to compelling non-fiction.
-                            </p>
-                            <a href="blog/march-recommendations.html" class="blog-card__read-more">
-                                Read More
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card" data-category="personal">
-                        <img src="https://via.placeholder.com/400x200/9b59b6/ffffff?text=Author+Journey" 
-                             alt="My Author Journey" 
-                             class="blog-card__image">
-                        <div class="blog-card__content">
-                            <div class="blog-card__meta">
-                                <span class="blog-card__category">Personal</span>
-                                <time datetime="2024-02-25">February 25, 2024</time>
-                            </div>
-                            <h3 class="blog-card__title">From First Draft to Bestseller: My Journey</h3>
-                            <p class="blog-card__excerpt">
-                                The path to becoming a published author wasn't easy. Here's the honest story of my journey, including the failures, breakthroughs, and lessons learned.
-                            </p>
-                            <a href="blog/author-journey.html" class="blog-card__read-more">
-                                Read More
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card" data-category="writing-tips">
-                        <img src="https://via.placeholder.com/400x200/1abc9c/ffffff?text=Plot+Development" 
-                             alt="Plot Development Techniques" 
-                             class="blog-card__image">
-                        <div class="blog-card__content">
-                            <div class="blog-card__meta">
-                                <span class="blog-card__category">Writing Tips</span>
-                                <time datetime="2024-02-20">February 20, 2024</time>
-                            </div>
-                            <h3 class="blog-card__title">Mastering Plot Development</h3>
-                            <p class="blog-card__excerpt">
-                                A compelling plot is what keeps readers turning pages. Learn the essential techniques for crafting plot structures that engage and satisfy your audience.
-                            </p>
-                            <a href="blog/plot-development.html" class="blog-card__read-more">
-                                Read More
-                            </a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Load More Button -->
-                <div class="load-more">
-                    <button class="btn btn--secondary" id="load-more-btn">Load More Posts</button>
+                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <div style="font-size: 4rem; margin-bottom: var(--spacing-xl);">📝</div>
+                    <h2 style="margin-bottom: var(--spacing-lg);" data-translate="blog.comingSoon.title">Blog Coming Soon</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-2xl); font-size: var(--font-size-lg);" data-translate="blog.comingSoon.description">
+                        I'm currently working on bringing you valuable content about cryptocurrency trading, investment strategies, 
+                        Python development, and market analysis. In the meantime, you can find my insights on these platforms:
+                    </p>
+                    
+                    <div style="display: grid; gap: var(--spacing-lg); max-width: 400px; margin: 0 auto;">
+                        <a href="https://note.com/daniel_tanaka_x" class="btn btn--secondary btn--large" target="_blank" rel="noopener">
+                            📰 <span data-translate="blog.platforms.note">Read on Note.com</span>
+                        </a>
+                        <a href="https://qiita.com/danieltanaka" class="btn btn--secondary btn--large" target="_blank" rel="noopener">
+                            💻 <span data-translate="blog.platforms.qiita">Technical Articles on Qiita</span>
+                        </a>
+                        <a href="https://danieltanaka.substack.com/" class="btn btn--secondary btn--large" target="_blank" rel="noopener">
+                            📧 <span data-translate="blog.platforms.substack">Subscribe to Newsletter</span>
+                        </a>
+                        <a href="https://x.com/daniel_tanaka_/" class="btn btn--secondary btn--large" target="_blank" rel="noopener">
+                            🐦 <span data-translate="blog.platforms.twitter">Follow on X (Twitter)</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Newsletter Signup -->
+        <!-- Newsletter Section -->
         <section class="section" style="background-color: var(--background-secondary);">
             <div class="container">
                 <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                    <h2>Stay Updated</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-2xl);">
-                        Get my latest blog posts delivered directly to your inbox, plus exclusive writing tips and behind-the-scenes content.
+                    <h2 data-translate="blog.newsletter.title">Stay Updated</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-2xl);" data-translate="blog.newsletter.subtitle">
+                        Get my latest blog posts delivered directly to your inbox, plus exclusive trading tips and behind-the-scenes content.
                     </p>
                     <form style="display: flex; gap: var(--spacing-md); max-width: 400px; margin: 0 auto;" action="#" method="post">
-                        <input type="email" placeholder="Your email address" class="form-input" style="flex: 1;" required>
-                        <button type="submit" class="btn btn--primary">Subscribe</button>
+                        <input type="email" data-translate="blog.newsletter.placeholder" placeholder="Your email address" class="form-input" style="flex: 1;" required>
+                        <button type="submit" class="btn btn--primary" data-translate="blog.newsletter.button">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -416,42 +125,35 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__section">
-                    <h3>About Author Name</h3>
-                    <p>
-                        A passionate storyteller with a love for crafting compelling narratives that resonate with readers worldwide. 
-                        Author of multiple bestselling novels across various genres.
+                    <h3 data-translate="footer.about.title">About Daniel Tanaka</h3>
+                    <p data-translate="footer.about.description">
+                        Cryptocurrency trader, Kindle author, and technology enthusiast. Passionate about sharing trading insights, 
+                        investment strategies, and innovative approaches to digital finance.
                     </p>
                 </div>
                 
                 <div class="footer__section">
-                    <h3>Quick Links</h3>
+                    <h3 data-translate="footer.links.title">Quick Links</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="books.html">My Books</a></li>
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="blog.html">Blog</a></li>
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="about.html">About Me</a></li>
-                        <li style="margin-bottom: var(--spacing-sm);"><a href="contact.html">Contact</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="books.html" data-translate="footer.links.books">My Books</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="blog.html" data-translate="footer.links.blog">Blog</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="about.html" data-translate="footer.links.about">About Me</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="contact.html" data-translate="footer.links.contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer__section">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="https://twitter.com/authorname" class="social-link" aria-label="Follow on Twitter">
-                            <svg class="social-link__icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                        </a>
-                        <a href="https://facebook.com/authorname" class="social-link" aria-label="Follow on Facebook">
-                            <svg class="social-link__icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                    </div>
+                    <h3 data-translate="footer.newsletter.title">Newsletter</h3>
+                    <p data-translate="footer.newsletter.description">Stay updated with my latest releases and exclusive content.</p>
+                    <form style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);" action="#" method="post">
+                        <input type="email" data-translate="footer.newsletter.placeholder" placeholder="Your email" class="form-input" style="flex: 1;" required>
+                        <button type="submit" class="btn btn--primary" data-translate="footer.newsletter.button">Subscribe</button>
+                    </form>
                 </div>
             </div>
             
             <div class="footer__bottom">
-                <p>&copy; 2024 Author Name. All rights reserved.</p>
+                <p data-translate="footer.copyright">&copy; 2024 Daniel Tanaka. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -459,53 +161,7 @@
     <!-- Scripts -->
     <script src="js/theme.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/language.js"></script>
     <script src="js/main.js"></script>
-    
-    <!-- Blog functionality -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Category filtering
-            const categoryTags = document.querySelectorAll('.category-tag');
-            const blogCards = document.querySelectorAll('.blog-card, .featured-post');
-
-            categoryTags.forEach(tag => {
-                tag.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const category = this.getAttribute('data-category');
-                    
-                    // Update active tag
-                    categoryTags.forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Filter blog posts
-                    blogCards.forEach(card => {
-                        const cardCategory = card.getAttribute('data-category');
-                        
-                        if (category === 'all' || cardCategory === category) {
-                            card.style.display = '';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-
-            // Load more functionality (placeholder)
-            const loadMoreBtn = document.getElementById('load-more-btn');
-            let postsLoaded = 7; // Initial number of posts
-            
-            loadMoreBtn.addEventListener('click', function() {
-                // Simulate loading more posts
-                this.textContent = 'Loading...';
-                this.disabled = true;
-                
-                setTimeout(() => {
-                    this.textContent = 'No More Posts';
-                    this.disabled = true;
-                    // In a real implementation, you would fetch more posts here
-                }, 1000);
-            });
-        });
-    </script>
 </body>
 </html>

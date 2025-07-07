@@ -7,6 +7,7 @@ const urlsToCache = [
   '/blog.html',
   '/about.html',
   '/contact.html',
+  '/calculator.html',
   '/css/main.css',
   '/css/variables.css',
   '/css/base.css',
@@ -41,7 +42,7 @@ self.addEventListener('fetch', (event) => {
         if (response) {
           return response;
         }
-        
+
         // Otherwise, fetch from network
         return fetch(event.request)
           .then((response) => {
@@ -49,16 +50,13 @@ self.addEventListener('fetch', (event) => {
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
-
             // Clone the response
             const responseToCache = response.clone();
-
             // Cache the fetched response
             caches.open(CACHE_NAME)
               .then((cache) => {
                 cache.put(event.request, responseToCache);
               });
-
             return response;
           })
           .catch(() => {

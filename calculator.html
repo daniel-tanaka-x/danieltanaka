@@ -27,27 +27,25 @@
     <link rel="stylesheet" href="css/main.css">
     
     <style>
-        .calculator-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            margin-top: 6rem;
+        .calculator-section {
+            padding: var(--spacing-4xl) 0;
+            margin-top: var(--spacing-2xl);
         }
 
         .calculator-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: var(--spacing-4xl);
         }
 
         .calculator-header h1 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
+            font-size: var(--font-size-4xl);
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-md);
         }
 
         .calculator-header p {
             color: var(--text-secondary);
-            font-size: 1.1rem;
+            font-size: var(--font-size-lg);
         }
 
         .calculator-tool {
@@ -268,98 +266,100 @@
     </header>
 
     <!-- Main Content -->
-    <main id="main-content" class="main-content">
-        <div class="calculator-container">
-            <div class="calculator-header">
-                <h1>Perpetual Futures Calculator</h1>
-                <p>Professional trading tool for position sizing and risk management</p>
-            </div>
-            
-            <div class="calculator-tool">
-                <h2>Perpetual Futures Calculator</h2>
-                <p class="subtitle">Position sizing and risk management</p>
+    <main id="main-content">
+        <section class="calculator-section">
+            <div class="container">
+                <div class="calculator-header">
+                    <h1>Perpetual Futures Calculator</h1>
+                    <p>Professional trading tool for position sizing and risk management</p>
+                </div>
                 
-                <div class="section">
-                    <h3 class="section-title">Account Settings</h3>
-                    <div class="input-group">
-                        <div class="input-wrapper">
-                            <label for="balance">Account Balance</label>
-                            <input type="number" id="balance" value="1000" step="0.01" min="0">
-                            <span class="input-suffix">$</span>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="stopLoss">Stop Loss</label>
-                            <input type="number" id="stopLoss" value="2" step="0.1" min="0">
-                            <span class="input-suffix">%</span>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="betSize">Bet Size</label>
-                            <input type="number" id="betSize" value="10" step="0.1" min="0">
-                            <span class="input-suffix">%</span>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="leverage">Leverage</label>
-                            <input type="number" id="leverage" value="10" step="1" min="1">
-                            <span class="input-suffix">x</span>
+                <div class="calculator-tool">
+                    <h2>Perpetual Futures Calculator</h2>
+                    <p class="subtitle">Position sizing and risk management</p>
+                    
+                    <div class="section">
+                        <h3 class="section-title">Account Settings</h3>
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <label for="balance">Account Balance</label>
+                                <input type="number" id="balance" value="1000" step="0.01" min="0">
+                                <span class="input-suffix">$</span>
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="stopLoss">Stop Loss</label>
+                                <input type="number" id="stopLoss" value="2" step="0.1" min="0">
+                                <span class="input-suffix">%</span>
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="betSize">Bet Size</label>
+                                <input type="number" id="betSize" value="10" step="0.1" min="0">
+                                <span class="input-suffix">%</span>
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="leverage">Leverage</label>
+                                <input type="number" id="leverage" value="10" step="1" min="1">
+                                <span class="input-suffix">x</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="section">
-                    <h3 class="section-title">Trade Parameters</h3>
-                    <div class="input-group">
-                        <div class="input-wrapper">
-                            <label for="entryPrice">Entry Price</label>
-                            <input type="number" id="entryPrice" value="100000" step="0.01" min="0">
-                            <span class="input-suffix">$</span>
+                    <div class="section">
+                        <h3 class="section-title">Trade Parameters</h3>
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <label for="entryPrice">Entry Price</label>
+                                <input type="number" id="entryPrice" value="100000" step="0.01" min="0">
+                                <span class="input-suffix">$</span>
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="riskThreshold">Risk Threshold</label>
+                                <input type="number" id="riskThreshold" value="1" step="0.1" min="0">
+                                <span class="input-suffix">%</span>
+                            </div>
                         </div>
-                        <div class="input-wrapper">
-                            <label for="riskThreshold">Risk Threshold</label>
-                            <input type="number" id="riskThreshold" value="1" step="0.1" min="0">
-                            <span class="input-suffix">%</span>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="results">
+                        <h3 class="section-title">Calculations</h3>
+                        <div class="result-item">
+                            <span class="result-label">Stop Loss Price (Long)</span>
+                            <span class="result-value" id="stopLossLong">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Stop Loss Price (Short)</span>
+                            <span class="result-value" id="stopLossShort">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Position Size (Crypto)</span>
+                            <span class="result-value" id="positionSize">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Max Loss</span>
+                            <span class="result-value negative" id="maxLoss">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Stop Distance</span>
+                            <span class="result-value" id="stopDistance">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Margin Required</span>
+                            <span class="result-value" id="marginRequired">-</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Max Loss (Risk Check)</span>
+                            <span class="result-value negative" id="maxLossCheck">-</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="divider"></div>
-
-                <div class="results">
-                    <h3 class="section-title">Calculations</h3>
-                    <div class="result-item">
-                        <span class="result-label">Stop Loss Price (Long)</span>
-                        <span class="result-value" id="stopLossLong">-</span>
+                    <div class="warning" id="warning">
+                        ⚠️ Warning: Your max loss exceeds your risk threshold
                     </div>
-                    <div class="result-item">
-                        <span class="result-label">Stop Loss Price (Short)</span>
-                        <span class="result-value" id="stopLossShort">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-label">Position Size (Crypto)</span>
-                        <span class="result-value" id="positionSize">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-label">Max Loss</span>
-                        <span class="result-value negative" id="maxLoss">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-label">Stop Distance</span>
-                        <span class="result-value" id="stopDistance">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-label">Margin Required</span>
-                        <span class="result-value" id="marginRequired">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-label">Max Loss (Risk Check)</span>
-                        <span class="result-value negative" id="maxLossCheck">-</span>
-                    </div>
-                </div>
-
-                <div class="warning" id="warning">
-                    ⚠️ Warning: Your max loss exceeds your risk threshold
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -367,47 +367,45 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__section">
-                    <h3 class="footer__title">Daniel Tanaka</h3>
-                    <p class="footer__description">
-                        Cryptocurrency trader, Kindle author, and technology enthusiast sharing insights on trading, investments, and innovation.
+                    <h3 data-translate="footer.about.title">About Daniel Tanaka</h3>
+                    <p data-translate="footer.about.description">
+                        Cryptocurrency trader, Kindle author, and technology enthusiast. Passionate about sharing trading insights, investment strategies, and innovative approaches to digital finance.
                     </p>
                 </div>
                 
                 <div class="footer__section">
-                    <h4 class="footer__subtitle">Quick Links</h4>
-                    <ul class="footer__links">
-                        <li><a href="index.html" class="footer__link">Home</a></li>
-                        <li><a href="about.html" class="footer__link">About</a></li>
-                        <li><a href="books.html" class="footer__link">Books</a></li>
-                        <li><a href="blog.html" class="footer__link">Blog</a></li>
-                        <li><a href="calculator.html" class="footer__link">Calculator</a></li>
-                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    <h3 data-translate="footer.links.title">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="books.html" data-translate="footer.links.books">My Books</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="blog.html" data-translate="footer.links.blog">Blog</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="calculator.html" data-translate="nav.calculator">Calculator</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="about.html" data-translate="footer.links.about">About Me</a></li>
+                        <li style="margin-bottom: var(--spacing-sm);"><a href="contact.html" data-translate="footer.links.contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer__section">
-                    <h4 class="footer__subtitle">Connect</h4>
-                    <ul class="footer__links">
-                        <li><a href="#" class="footer__link">Twitter</a></li>
-                        <li><a href="#" class="footer__link">LinkedIn</a></li>
-                        <li><a href="#" class="footer__link">GitHub</a></li>
-                        <li><a href="#" class="footer__link">Amazon Author</a></li>
-                    </ul>
+                    <h3 data-translate="footer.newsletter.title">Newsletter</h3>
+                    <p data-translate="footer.newsletter.description">Stay updated with my latest releases and exclusive content.</p>
+                    <form style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);" action="#" method="post">
+                        <input type="email" data-translate="footer.newsletter.placeholder" placeholder="Your email" class="form-input" style="flex: 1;" required>
+                        <button type="submit" class="btn btn--primary" data-translate="footer.newsletter.button">Subscribe</button>
+                    </form>
                 </div>
             </div>
             
             <div class="footer__bottom">
-                <p>&copy; 2024 Daniel Tanaka. All rights reserved.</p>
+                <p data-translate="footer.copyright">&copy; 2024 Daniel Tanaka. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/navigation.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
     <script src="js/language.js"></script>
     <script src="js/stats.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/pwa.js"></script>
     
     <script>

@@ -235,35 +235,32 @@
             <div class="header__content">
                 <a href="index.html" class="header__logo">Daniel Tanaka</a>
                 
-                <!-- Desktop Navigation -->
-                <nav class="header__nav" id="nav">
-                    <ul class="header__nav-list">
-                        <li class="header__nav-item">
-                            <a href="index.html" class="header__nav-link">Home</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="about.html" class="header__nav-link">About</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="books.html" class="header__nav-link">Books</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="blog.html" class="header__nav-link">Blog</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="calculator.html" class="header__nav-link header__nav-link--active">Calculator</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="contact.html" class="header__nav-link">Contact</a>
-                        </li>
+                <nav class="nav" role="navigation" aria-label="Main navigation">
+                    <ul class="nav__list">
+                        <li><a href="index.html" class="nav__link" data-translate="nav.home">Home</a></li>
+                        <li><a href="books.html" class="nav__link" data-translate="nav.books">Books</a></li>
+                        <li><a href="blog.html" class="nav__link" data-translate="nav.blog">Blog</a></li>
+                        <li><a href="calculator.html" class="nav__link nav__link--active" data-translate="nav.calculator">Calculator</a></li>
+                        <li><a href="about.html" class="nav__link" data-translate="nav.about">About</a></li>
+                        <li><a href="contact.html" class="nav__link" data-translate="nav.contact">Contact</a></li>
                     </ul>
+                    
+                    <button class="theme-toggle" aria-label="Toggle dark/light theme">
+                        <svg class="theme-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="language-toggle" aria-label="Switch language">
+                        <span class="language-flag">🇺🇸</span>
+                        <span class="language-text">English</span>
+                    </button>
                 </nav>
                 
-                <!-- Mobile Menu Toggle -->
-                <button class="header__menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span class="mobile-menu-toggle__bar"></span>
+                    <span class="mobile-menu-toggle__bar"></span>
+                    <span class="mobile-menu-toggle__bar"></span>
                 </button>
             </div>
         </div>
